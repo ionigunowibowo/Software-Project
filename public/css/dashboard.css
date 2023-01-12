@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: .875rem;
+}
+
+.navbar{
+  height: 80px;
+  background-color: #E61B33;
+}
+
+.feather {
+  width: 123px;
+  height: 24px;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  height: auto;
+  left: 0px;
+  background: #D9D9D9;
+  top: 5rem;
+  /* rtl:raw:
+  right: 0;
+  */
+  bottom: 0;
+  /* rtl:remove */
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    top: 5rem;
+  }
+}
+
+.sidebar-sticky {
+  height: calc(100vh - 48px);
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-link {
+  font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 22px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+
+letter-spacing: 0.07em;
+
+color: #000000;
+}
+
+.sidebar .nav-link .feather {
+
+  color: #000;
+}
+
+.sidebar .nav-link.active {
+  font-weight: 600;
+  color: #E61B33;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+/* .sidebar-heading {
+  font-size: .75rem;
+} */
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+  font-weight: 700;
+font-size: 20px;
+line-height: 127%;
+/* or 25px */
+
+letter-spacing: 0.03em;
+
+color: #FFFFFF;
+
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+ 
+  /* box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25); */
+}
+
+.navbar .navbar-toggler {
+  top: .25rem;
+  right: 1rem;
+}
+
+.navbar .form-control {
+  padding: .75rem 1rem;
+}
+
+
+.form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+/* dropdown */
+
+.navbar-nav
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+.dropdown-toggle:empty::after {
+  margin-left: 0;
+}
+
+/* end dropdown */
+
+/* Dashboard */
+h1 {
+  font-weight: 800;
+  font-size: 34px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+
+color: #000000;
+}
